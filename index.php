@@ -2,16 +2,6 @@
 <html>
 
 <head>
-<!--    <meta charset="--><?php //bloginfo( 'charset' ); ?><!--">-->
-<!--    <title>-->
-<!--        --><?php //echo wp_get_document_title(); ?>
-<!--    </title>-->
-<!---->
-<!--    <link rel="stylesheet" href="--><?php //echo get_stylesheet_uri(); ?><!--" type="text/css" />-->
-<!---->
-<!--    --><?php //wp_head(); ?>
-
-
     <meta charset="utf-8" />
     <title>Тема wordpress cborka21</title>
 
@@ -25,49 +15,27 @@
 
     <?php wp_head() ?>
 
-    <!--    <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>" /> -->
+    <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>" />
 
 </head>
 
 <body>
-<header> <!-- Header Begin -->
 
-<!--    <div><a href="--><?php //echo home_url() ?><!--" >Блог "--><?php //bloginfo("Name") ?><!--" </a></div>-->
-<!--    <button visible="false" onclick="show_hide_sidebar()">E</button>-->
-<!---->
-<!--    --><?php //wp_nav_menu( [
-//        'theme_location'  => 'top'
-//    ] );
-//    ?>
+    <div class="grid-container">
+        <?php get_header(); ?>
 
-</header> <!-- Header End -->
-xxx
+        <main>
+            <section id="intro">
+                <div>Привет, мир!</div>
+            </section>
+        </main>
 
-<div class="grid-container">
-<!--    --><?php //get_header(); ?>
-<!---->
-<!--    <main>-->
-<!--        <section id="intro">-->
-<!--            <div>Привет, мир!</div>-->
-<!--        </section>-->
-<!--    </main>-->
-<!---->
-<!--    --><?php //get_sidebar(); ?>
-<!--    --><?php //get_sidebar("right"); ?>
-<!--    --><?php //get_footer(); ?>
-</div>
+<!--        --><?php //get_sidebar(); ?>
+    <!--    --><?php //get_sidebar("right"); ?>
+        <?php get_footer(); ?>
+    </div>
 
-zzz
-
-<!--<footer>-->
-<!---->
-<!--    --><?php //// wp_nav_menu( ['theme_location'  => 'bottom'] ); ?>
-<!--    <div>Copyright &copy; 2020 cborka</div>-->
-<!--    <div id="eee"></div>-->
-<!---->
-<!--</footer> -->
 <!-- <script src="js/init.js"></script> -->
-<?php //wp_footer(); ?>
 
 </body>
 
