@@ -2,47 +2,73 @@
 <html>
 
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <title>
-        <?php echo wp_get_document_title(); ?>
-    </title>
+<!--    <meta charset="--><?php //bloginfo( 'charset' ); ?><!--">-->
+<!--    <title>-->
+<!--        --><?php //echo wp_get_document_title(); ?>
+<!--    </title>-->
+<!---->
+<!--    <link rel="stylesheet" href="--><?php //echo get_stylesheet_uri(); ?><!--" type="text/css" />-->
+<!---->
+<!--    --><?php //wp_head(); ?>
 
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
 
-    <?php wp_head(); ?>
+    <meta charset="utf-8" />
+    <title>Тема wordpress cborka21</title>
+
+    <meta name="description" content="Тема для wordpress">
+    <meta name="author" content="cborka">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" href="favicon.ico" >
+
+
+    <?php wp_head() ?>
+
+    <!--    <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>" /> -->
+
 </head>
 
 <body>
-<header class="header">
-    <h1><?php bloginfo( 'name' ); ?></h1>
-    <h2><?php bloginfo( 'description' ); ?></h2>
-</header>
+<header> <!-- Header Begin -->
 
-<div class="middle">
-    <?php
-    // циклы вывода записей
-    // если записи найдены
-    if ( have_posts() ){
-        while ( have_posts() ){
-            the_post();
+<!--    <div><a href="--><?php //echo home_url() ?><!--" >Блог "--><?php //bloginfo("Name") ?><!--" </a></div>-->
+<!--    <button visible="false" onclick="show_hide_sidebar()">E</button>-->
+<!---->
+<!--    --><?php //wp_nav_menu( [
+//        'theme_location'  => 'top'
+//    ] );
+//    ?>
 
-            echo '<h3><a href="'. get_permalink() .'">'. get_the_title() .'</a></h3>';
+</header> <!-- Header End -->
+xxx
 
-            echo get_the_excerpt();
-        }
-    }
-    // записей не найдено
-    else{
-        echo ' <p>Записей нет...</p>';
-    }
-    ?>
+<div class="grid-container">
+<!--    --><?php //get_header(); ?>
+<!---->
+<!--    <main>-->
+<!--        <section id="intro">-->
+<!--            <div>Привет, мир!</div>-->
+<!--        </section>-->
+<!--    </main>-->
+<!---->
+<!--    --><?php //get_sidebar(); ?>
+<!--    --><?php //get_sidebar("right"); ?>
+<!--    --><?php //get_footer(); ?>
 </div>
 
-<footer class="footer">
-    <?php echo date('Y') ?> © cborka 21 3
-</footer>
+zzz
 
-<?php wp_footer(); ?>
+<!--<footer>-->
+<!---->
+<!--    --><?php //// wp_nav_menu( ['theme_location'  => 'bottom'] ); ?>
+<!--    <div>Copyright &copy; 2020 cborka</div>-->
+<!--    <div id="eee"></div>-->
+<!---->
+<!--</footer> -->
+<!-- <script src="js/init.js"></script> -->
+<?php //wp_footer(); ?>
+
 </body>
 
 </html>
