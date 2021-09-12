@@ -5,15 +5,13 @@
  */
 
 body {
-    background: lavender;
+    /*background: lavender;*/
     /*max-width: 1000px;*/
     /*margin: 1em auto;*/
 }
 
 div {
-    border: 1px #404040 solid;
-
-
+    /*border: 1px lavender solid;*/
 }
 
 header, footer {
@@ -21,17 +19,17 @@ header, footer {
     text-align: center;
 }
 
-header, .header {
+.header {
     background: lavenderblush;
     color: blueviolet;
 }
-footer, .footer {
+.footer {
     background: blueviolet;
     color: lavenderblush;
 }
 
 .pink {
-    background: pink;
+    background: azure ;
     color: red;
 }
 .white {

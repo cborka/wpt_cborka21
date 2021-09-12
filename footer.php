@@ -1,8 +1,9 @@
 <hr>
-<footer>
+<footer class="pink">
+    <div class="">
+        <div>Copyright &copy; 2021 cborka</div>
+    </div>
+</footer>
 
-<div>Copyright &copy; 2021 cborka</div>
 
 <?php wp_footer(); ?>
-
-</footer>
