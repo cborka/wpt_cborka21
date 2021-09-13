@@ -19,9 +19,12 @@ function show_hide_sidebar()
     // }
 
 
-    if (aside.innerHTML == '')
+    if (aside.innerHTML == '') {
         aside.innerHTML = aside_content;
-    else
+    }
+    else {
         aside.innerHTML = '';
+
+    }
 
 }

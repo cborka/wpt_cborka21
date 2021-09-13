@@ -19,26 +19,31 @@
 </head>
 
 <body>
+<div class="grid-container">
 
     <?php get_header(); ?>
 
-    <main id="left_sidebar" class="" >
-        <?php get_sidebar(); ?>
-        <br>
-        <br>
-        <br>
+    <main class="" >
+        main
     </main>
 
     <?php get_footer(); ?>
 
 
-<!--<!--        -->--><?php ////get_sidebar(); ?>
-<!--    <!--    -->--><?php ////get_sidebar("right"); ?>
+    <?php get_sidebar(); ?>
+<!--        --><?php //get_sidebar("right"); ?>
 
-    <script src="js/init.js"></script>
+
+    <aside  class="right">
+        Правая панель
+        конец сайдбара
+    </aside>
+
+
+<!--    <script src="js/init.js"></script>-->
 <!--    //    alert("aaa");-->
 
-
+</div>
 </body>
 
 </html>
