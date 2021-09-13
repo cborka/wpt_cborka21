@@ -1,7 +1,7 @@
 <hr>
 <footer class="pink">
     <div class="">
-        <div>Copyright &copy; 2021 cborka</div>
+        <div>Copyright &copy; 2021 cborkа</div>
     </div>
 </footer>
 
