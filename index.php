@@ -40,6 +40,10 @@
     </aside>
 
 
+    <script>
+        let aside_content = document.getElementById('left_sidebar').innerHTML;
+        alert(aside_content);
+    </script>
 <!--    <script src="js/init.js"></script>-->
 <!--    //    alert("aaa");-->
 

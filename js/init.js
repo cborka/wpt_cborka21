@@ -2,13 +2,18 @@
 
 //document.getElementById('eee').innerHTML = ' js ';
 
-let aside_content = document.getElementById('left_sidebar').innerHTML;
+//let aside = document.getElementById('left_sidebar');
+//let aside_content = aside.innerHTML;
+//let aside_content = 'qqq';
+//alert(document.getElementById('left_sidebar'));
+//aside_content = document.getElementById('left_sidebar').innerHTML;
+//alert(aside_content);
+//let aside_content = 'zxcvbnm,';
 //alert("init");
 
 function show_hide_sidebar()
 {
-     let aside = document.getElementById('left_sidebar');
-
+    let aside_content = document.getElementById('left_sidebar').innerHTML;
 //    alert("qqqq");
      //alert(aside.style.visibility);
 
@@ -18,12 +23,14 @@ function show_hide_sidebar()
     //     aside.style.visibility = 'visible';
     // }
 
+    alert(','+document.getElementById('left_sidebar').innerHTML+'.');
+    alert('z'+aside_content+'z');
 
-    if (aside.innerHTML == '') {
-        aside.innerHTML = aside_content;
+    if (document.getElementById('left_sidebar').innerHTML === '') {
+        document.getElementById('left_sidebar').innerHTML = aside_content;
     }
     else {
-        aside.innerHTML = '';
+        document.getElementById('left_sidebar').innerHTML = '';
 
     }
 
