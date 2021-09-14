@@ -19,7 +19,7 @@
             "f f f";
     grid-template-columns: minmax(200px, 1fr) minmax(300px, 3fr) minmax(250px, 1fr);
     /*grid-template-columns: minmax(150px, 300px) 1fr minmax(150px, min-content);*/
-    grid-template-rows: minmax(15px, min-content) 1fr minmax(15px, min-content);
+    grid-template-rows: minmax(15px, min-content) 1fr minmax(1px, min-content);
 
     grid-gap: 1px;
     background-color: lightgray;
@@ -113,4 +113,8 @@ div {
 .white {
     background: white;
     color: black;
+}
+.blue {
+    background: skyblue;
+    color: navy;
 }

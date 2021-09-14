@@ -19,15 +19,13 @@
 </head>
 
 <body>
-<div class="grid-container">
+<div class="grid-container blue">
     <header class="">
-    <div  class="white">
-        <div><a href="<?php echo home_url() ?>" >Блог "<?php bloginfo("Name") ?>" </a></div>
-    </div>
+        <div  class="white">
+            <div><a href="<?php echo home_url() ?>" >Блог "<?php bloginfo("Name") ?>" </a></div>
+        </div>
 
-    <button visible="true" onclick="show_hide_sidebar()">E</button>
+        <button visible="true" onclick="show_hide_sidebar()">E</button>
 
-
+         <!--    --><?php //wp_nav_menu( ['theme_location'  => 'top'] ); ?>
     </header>
-    <hr>
-    <?php wp_nav_menu( ['theme_location'  => 'top'] ); ?>
