@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Тема wordpress cborka21</title>
+<!--    <title>Тема wordpress cborka21</title>-->
+    <title><?php wp_title( '|', true, 'right' ); ?></title>
 
     <meta name="description" content="Тема для wordpress">
     <meta name="author" content="cborka">

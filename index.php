@@ -1,10 +1,8 @@
-
+index
     <?php get_header(); ?>
 
     <main>
         <section id="intro">
-            <div>Привет, мир!</div>
-            <div>Привет, мир!</div>
             <div>Привет, мир!</div>
         </section>
     </main>

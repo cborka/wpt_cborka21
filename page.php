@@ -1,4 +1,4 @@
-
+page
 <?php get_header(); ?>
 
 <main>

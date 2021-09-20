@@ -1,4 +1,4 @@
-
+archive
     <?php get_header("page"); ?>
 
     <main>
@@ -26,10 +26,7 @@
 
                 <?php
 //                if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnail'); }
-                echo get_the_date() . ' ';
-                the_time();
-                the_category($separator = '/');
-                the_tags(null, ', ');
+                echo get_the_date() . ' '; the_time(); echo ' | '; the_category($separator = '/'); echo ' | '; the_tags(null, ', ');
                 the_excerpt();
                 //the_content();
                 get_template_part('template-parts/content', get_post_type());

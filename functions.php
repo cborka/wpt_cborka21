@@ -1,9 +1,33 @@
 <?php
 
+if ( ! function_exists( 'cborka21_setup' ) ) :
+    function cborka21_setup() {
+        // echo 'setup';
+// Рекомендации из учебника
+//        load_theme_textdomain( 'myfirsttheme', get_template_directory() . '/languages' );
+//        add_theme_support( 'automatic-feed-links' );   // Add default posts and comments RSS feed links to <head>
+//        add_theme_support( 'post-thumbnails' );
+//        register_nav_menus( array(
+//            'primary'   => __( 'Primary Menu', 'myfirsttheme' ),
+//            'secondary' => __('Secondary Menu', 'myfirsttheme' )
+//        ) );
+//        add_theme_support( 'post-formats', array ( 'gallery', 'quote', 'image', 'video' ) );
+
+// Из видео примеры
+//    register_nav_menu( 'top', 'Top Menu' );
+//    register_nav_menu( 'bottom', 'Bottom Menu' );
+//
+    add_theme_support('title-tag');
+//    add_theme_support('post-thumbnails', array( 'post' ) );
+
+
+    }
+endif;
+add_action( 'after_setup_theme', 'cborka21_setup' );
+
 // правильный способ подключить стили и скрипты темы
 add_action( 'wp_enqueue_scripts', 'theme_add_syles' );
 add_action( 'wp_footer', 'theme_add_scripts' );
-add_action( 'after_setup_theme', 'theme_register_nav_menu' );
 add_action( 'widgets_init', 'register_my_widgets' );
 
 // widgets_init
@@ -20,14 +44,6 @@ function register_my_widgets(){
     ) );
 }
 
-// after_setup_theme
-function theme_register_nav_menu() {
-//    register_nav_menu( 'top', 'Top Menu' );
-//    register_nav_menu( 'bottom', 'Bottom Menu' );
-//
-//    add_theme_support('title-tag');
-//    add_theme_support('post-thumbnails', array( 'post' ) );
-}
 
 // wp_enqueue_scripts
 function theme_add_syles() {
