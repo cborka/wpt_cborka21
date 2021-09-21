@@ -1,9 +1,12 @@
-page
-<?php get_header(); ?>
-
+<?php get_header();
+/*
+Template Name: About layout
+Template Post Type: post, page, event
+*/
+?>
 <main>
     <section id="intro">
-        <div>Страница 1</div>
+        <div>Страница о сайте</div>
 
         <?php the_post(); ?>
         <H3><?php the_title(); ?></H3>

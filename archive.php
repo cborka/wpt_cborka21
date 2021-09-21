@@ -6,7 +6,6 @@ archive
             <div>Архив записей</div>
         </section>
 
-
         <?php if (have_posts()) : ?>
 
             <header class="page-header">
@@ -21,13 +20,13 @@ archive
             while (have_posts()) : the_post();
                 ?>
 
-                Автор <?php the_author(); ?>
+<!--                Автор --><?php //the_author(); ?>
                 <a href="<?php the_permalink(); ?>"><H3><?php the_title(); ?></H3></a>
 
                 <?php
 //                if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnail'); }
-                echo get_the_date() . ' '; the_time(); echo ' | '; the_category($separator = '/'); echo ' | '; the_tags(null, ', ');
-                the_excerpt();
+                //echo get_the_date() . ' '; the_time(); echo ' | '; the_category($separator = '/'); echo ' | '; the_tags(null, ', ');
+                //the_excerpt();
                 //the_content();
                 get_template_part('template-parts/content', get_post_type());
 

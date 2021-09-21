@@ -17,6 +17,10 @@ single
 
         the_content();
 
+        if (post_type_exists('post')) {
+            echo ' <br>x '. get_post_type();
+        }
+
         previous_post_link('%link', '<< %title | ');
         next_post_link('%link', ' %title >>');
 
