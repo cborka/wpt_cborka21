@@ -28,5 +28,5 @@
 
         <button visible="true" onclick="show_hide_sidebar()">E</button>
 
-<!--             --><?php //wp_nav_menu( ['theme_location'  => 'top'] ); ?>
+
     </header>

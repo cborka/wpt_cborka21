@@ -28,7 +28,33 @@ single
 //        echo '<br>' . get_parent_theme_file_path( 'images/logo.png' );
 
 //        get_template_part( 'bebebe' ); // include bebebe.php
+
+        // If comments are open or we have at least one comment, load up the comment template.
+        if ( comments_open() || get_comments_number() ) :
+            comments_template();
+        endif;
+
+/*
+        //Get only the approved comments
+        $args = array(
+        'status' => 'approve'
+        );
+
+        // The comment Query
+        $comments_query = new WP_Comment_Query;
+        $comments = $comments_query->query( $args );
+
+        // Comment Loop
+        if ( $comments ) {
+        foreach ( $comments as $comment ) {
+        echo '<p>' . $comment->comment_content . '</p>';
+        }
+        } else {
+        echo 'No comments found.';
+        }
+*/
         ?>
+
 
 
     </main>
