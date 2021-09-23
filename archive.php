@@ -28,26 +28,34 @@ archive
                 //echo get_the_date() . ' '; the_time(); echo ' | '; the_category($separator = '/'); echo ' | '; the_tags(null, ', ');
                 //the_excerpt();
                 //the_content();
+
+                if (is_category( 'Программирование' ) || is_category( 'Мысли' )) {
+                    the_content();
+                }
+
                 get_template_part('template-parts/content', get_post_type());
 
             endwhile;
 
-            posts_nav_link();
-            echo '<br> ';
-            previous_posts_link(); echo ' *** '; next_posts_link();
-            echo '<br> ';
+//            posts_nav_link();
+//            echo '<br> ';
+//            previous_posts_link(); echo ' *** '; next_posts_link();
+//            echo '<br> ';
 
-//            the_posts_pagination( array(
-//                'show_all'     => false, // показаны все страницы участвующие в пагинации
-//                'end_size'     => 1,     // количество страниц на концах
-//                'mid_size'     => 1,     // количество страниц вокруг текущей
-//                'prev_next'    => true,  // выводить ли боковые ссылки "предыдущая/следующая страница".
-//                'prev_text'    => __('<<'),
-//                'next_text'    => __('>>'),
-//                'add_args'     => false, // Массив аргументов (переменных запроса), которые нужно добавить к ссылкам.
-//                'add_fragment' => '',     // Текст который добавиться ко всем ссылкам.
-//                'screen_reader_text' => __( ' ' )
-//            ));
+//            the_posts_pagination();
+//            echo paginate_links();
+
+            the_posts_pagination( array(
+                'show_all'     => false, // показаны все страницы участвующие в пагинации
+                'end_size'     => 3,     // количество страниц на концах
+                'mid_size'     => 3,     // количество страниц вокруг текущей
+                'prev_next'    => true,  // выводить ли боковые ссылки "предыдущая/следующая страница".
+                'prev_text'    => __('Назад'),
+                'next_text'    => __('Далее'),
+                'add_args'     => false, // Массив аргументов (переменных запроса), которые нужно добавить к ссылкам.
+                'add_fragment' => '',     // Текст который добавиться ко всем ссылкам.
+                'screen_reader_text' => __( ' ' )
+            ));
 
         else : //if (have_posts())
             echo 'Здесь нет записей.';

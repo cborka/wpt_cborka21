@@ -8,7 +8,10 @@ search.php
 
     <?php if (have_posts()) : ?>
 
-        <h1 class="">Поиск: <?php echo '"' . get_search_query() . '"'; ?></h1>
+        <header class="page-header">
+            <h1 class="">Поиск: <?php echo '"' . get_search_query() . '"'; ?></h1>
+        </header>
+
 
         <?php
         /* Start the Loop */
