@@ -15,29 +15,70 @@ archive
                 ?>
             </header><!-- .page-header -->
 
+            <?php  $is_short_content = (is_category( 'Программирование' ) || is_category( 'Мысли' ));  ?>
+
+
+            <?php  if (!$is_short_content) {  ?>
+            <table>
+                <thead>
+                    <td class="archive">Категория</td>
+                    <td class="archive">Название</td>
+                    <td class="archive">Дата</td>
+                </thead>
+            <?php  }  ?>
+
+
+
+
             <?php
             /* Start the Loop */
             while (have_posts()) : the_post();
                 ?>
 
 <!--                Автор --><?php //the_author(); ?>
-                <a href="<?php the_permalink(); ?>"><H3><?php the_title(); ?></H3></a>
+<!--                <a href="--><?php //the_permalink(); ?><!--"><H3>--><?php //the_title(); ?><!--</H3></a>-->
+                <?php
+//                if (has_category( 'Дневник' ) && (1 != get_current_user_id()) ) {
+//                    continue;
+//                }
+                ?>
+
+                <?php  if (!$is_short_content) {  ?>
+                <tr>
+                    <td class="archive"><?php the_category($separator = '/'); ?></td>
+                    <td class="archive"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
+                    <td class="archive"><?php echo get_the_date(); ?></td>
+<!--                    <td class="archive">--><?php //the_author(); ?><!--</td>-->
+                </tr>
+                <?php  }  ?>
+<!--                <a href="--><?php //the_permalink(); ?><!--">-->
+<!--                        ---><?php //the_category($separator = '/'); the_title(); the_author(); ?>
 
                 <?php
 //                if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnail'); }
                 //echo get_the_date() . ' '; the_time(); echo ' | '; the_category($separator = '/'); echo ' | '; the_tags(null, ', ');
                 //the_excerpt();
                 //the_content();
+                ?>
 
-                if (is_category( 'Программирование' ) || is_category( 'Мысли' )) {
-                    the_content();
-                }
+                <?php  if ($is_short_content) {  ?>
+                    <a href="<?php the_permalink(); ?>"><H3><?php the_title(); ?></H3></a>
 
+                     <?php  the_content(); ?>
+                <?php  }  ?>
+                <?php
                 get_template_part('template-parts/content', get_post_type());
+                ?>
+            <?php endwhile; ?>
 
-            endwhile;
 
-//            posts_nav_link();
+            <?php  if (!$is_short_content) {  ?>
+                </table>
+            <?php  }  ?>
+
+<?php
+
+        //            posts_nav_link();
 //            echo '<br> ';
 //            previous_posts_link(); echo ' *** '; next_posts_link();
 //            echo '<br> ';

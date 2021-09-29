@@ -19,7 +19,11 @@ search.php
             ?>
 
             <!--                Автор --><?php //the_author(); ?>
-            <a href="<?php the_permalink(); ?>"><H3><?php the_title(); ?></H3></a>
+<!--            <a href="--><?php //the_permalink(); ?><!--"><H3>--><?php //the_title(); ?><!--</H3></a>-->
+
+            <a href="<?php the_permalink(); ?>">
+                <div><?php the_title(); ?></div>
+            </a>
 
             <?php
 //                if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnail'); }

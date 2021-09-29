@@ -20,8 +20,30 @@
 </head>
 
 <body>
-<div class="grid-container blue">
+<div class="grid-container">
     <header class="">
+
+        <!--// ЛОГОТИП -->
+        <div class="logo">
+            <?php
+            if ($_SERVER['REQUEST_URI'] <> '/')
+            {
+                echo '<a title="На главную" href="/"><img src="/img/mp21.bmp" alt="Logo" /></a>';
+            }
+            else
+            {
+                echo '<img src="/img/mp21.bmp" alt="" />';
+            }
+            ?>
+        </div>
+
+
+        <div class="hd2">
+            <p class="titul"><span class="meta">МЕТА</span><span class="poznanie">ПОЗНАНИЕ</span></p>
+        </div>
+
+
+
         <div  class="white">
             <div><a href="<?php echo home_url() ?>" >Блог "<?php bloginfo("Name") ?>" </a></div>
         </div>

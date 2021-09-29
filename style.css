@@ -52,6 +52,7 @@ header {
 
 aside.left {
     grid-area: s;
+    /*background-color: lightcyan;*/
     background-color: lightcyan;
     padding: 5px;
 }
@@ -67,6 +68,7 @@ aside.left {
 aside.right {
     grid-area: r;
     background-color: cornsilk;
+    /*background-color: ivory;*/
     padding: 5px;
 }
 main {
@@ -86,7 +88,10 @@ body {
     background: lavender;
     /*max-width: 1000px;*/
     /*margin: 1em auto;*/
+    /*font-family: "Segoe UI", Roboto, Arial, Tahoma, Verdana, Georgia, 'Times New Roman', Times, serif;*/
     font-family: "Segoe UI", Roboto, Arial, Tahoma, Verdana, Georgia, 'Times New Roman', Times, serif;
+    color: #404040;
+
 }
 
 div {
@@ -99,16 +104,16 @@ div {
 /*}*/
 
 .header {
-    background: lavenderblush;
+    /*background: lavenderblush;*/
     color: blueviolet;
 }
 .footer {
-    background: blueviolet;
+    /*background: blueviolet;*/
     color: lavenderblush;
 }
 
 .pink {
-    background: skyblue ;
+    /*background: skyblue ;*/
     color: magenta;
 }
 .white {
@@ -116,6 +121,86 @@ div {
     color: black;
 }
 .blue {
-    background: skyblue;
-    color: navy;
+    /*background: skyblue;*/
+    color: red;
 }
+
+
+
+H1, H2, H3, H4, H5, H6 {
+    color: #909;
+}
+
+/* ================================== Ссылки ============================= */
+
+a {
+    /*color: #00adef;*/
+    color: #00adef;
+    text-decoration: none;
+}
+a:visited {
+    color: #0054a5;
+}
+a:hover {
+    color: #9d0a10;
+    /*text-decoration: underline;*/
+}
+
+a.tdnone:hover {
+    text-decoration: none;
+}
+
+/* Логотип */
+DIV.logo {
+    margin: 5px;
+    float: left;
+    width: 67px;
+    height: 67px;
+    background-color: inherit;
+}
+DIV.logbuttons
+{
+    margin: 1px 0px 0px 0px;
+    width: 123px;
+    overflowx: visible;
+}
+
+/* ТИТУЛ */
+DIV.hd2 {
+    margin-bottom: 0px;
+    padding: 0px;
+    height: 77px;
+}
+p.titul {
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    /*font-weightx: bold;*/
+    font-size: 34pt;
+    font-style: italic;
+}
+span.meta {
+    color: #a0a;
+}
+span.poznanie {
+    color: #909;
+}
+
+
+
+
+/*
+    АРХИВ
+ */
+
+.archive {
+    border: 1px solid lightgray;
+
+    padding: 1px 3px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
