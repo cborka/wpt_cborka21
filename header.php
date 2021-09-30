@@ -25,30 +25,25 @@
 
         <!--// ЛОГОТИП -->
         <div class="logo">
-            <?php
-            if ($_SERVER['REQUEST_URI'] <> '/')
-            {
-                echo '<a title="На главную" href="/"><img src="/img/mp21.bmp" alt="Logo" /></a>';
-            }
-            else
-            {
-                echo '<img src="/img/mp21.bmp" alt="" />';
-            }
-            ?>
+            <?php if ($_SERVER['REQUEST_URI'] <> '/') {?>
+                <a title="На главную" href="/"><img class="logoimg" src="<?php echo get_template_directory_uri(); ?>/img/logo-globus.png" alt="Logo" /></a>
+            <?php } else { ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/logo-globus.png" alt="<?php echo get_template_directory_uri(); ?>" />
+             <?php } ?>
         </div>
 
 
         <div class="hd2">
-            <p class="titul"><span class="meta">МЕТА</span><span class="poznanie">ПОЗНАНИЕ</span></p>
+            <p class="titul"><span class="meta">Блог</span><span class="poznanie">62</span></p>
         </div>
 
 
 
-        <div  class="white">
-            <div><a href="<?php echo home_url() ?>" >Блог "<?php bloginfo("Name") ?>" </a></div>
-        </div>
-
-        <button visible="true" onclick="show_hide_sidebar()">E</button>
+<!--        <div  class="white">-->
+<!--            <a href="--><?php //echo home_url() ?><!--" >Блог "--><?php //bloginfo("Name") ?><!--" </a>-->
+<!---->
+<!--            <button visible="true" onclick="show_hide_sidebar()">E</button>-->
+<!--        </div>-->
 
 
     </header>

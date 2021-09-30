@@ -173,11 +173,11 @@ DIV.hd2 {
 }
 p.titul {
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
     text-align: center;
-    /*font-weightx: bold;*/
+    font-weight: bold;
     font-size: 34pt;
-    font-style: italic;
+    /*font-style: italic;*/
 }
 span.meta {
     color: #a0a;
@@ -186,7 +186,10 @@ span.poznanie {
     color: #909;
 }
 
-
+.logoimg {
+    height: 90px;
+    width: 90px;
+}
 
 
 /*
