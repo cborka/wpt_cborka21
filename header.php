@@ -28,7 +28,7 @@
             <?php if ($_SERVER['REQUEST_URI'] <> '/') {?>
                 <a title="На главную" href="/"><img class="logoimg" src="<?php echo get_template_directory_uri(); ?>/img/logo-globus.png" alt="Logo" /></a>
             <?php } else { ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/logo-globus.png" alt="<?php echo get_template_directory_uri(); ?>" />
+                <img class="logoimg" src="<?php echo get_template_directory_uri(); ?>/img/logo-globus.png" alt="<?php echo get_template_directory_uri(); ?>" />
              <?php } ?>
         </div>
 
