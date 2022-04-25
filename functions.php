@@ -74,7 +74,9 @@ function theme_add_scripts() {
 
 ?>
 
-
+<?php
+//    add_theme_support( 'custom-header' );
+?>
 
 <?php
 
@@ -147,5 +149,41 @@ function wpdocs_register_widgets()
     register_widget('Cbw_Widget');
 }
 
+
+?>
+
+<?php
+
+//  ПРИМЕР АДМИНИСТРАТИВНОГО МЕНЮ ИЗ УЧЕБНИКА
+
+/** Step 2 (from text above).
+ *  Регистрация в админ.меню функции внутри которой вызывается wp-функция создания меню
+ */
+add_action( 'admin_menu', 'my_menu' );
+
+/** Step 1.
+  Функция внутри которой должен быть вызов функции создания меню
+ */
+function my_menu() {
+    add_options_page(
+        'My Options',
+        'Моё меню. Пример',     // Название
+        'manage_options',       // Формирование страницы
+        'my-unique-identifier',
+        'my_options'
+    );
+}
+
+/** Step 3.
+    Формирование страницы, которая будет показана при выборе создаваемого пункта меню
+ */
+function my_options() {
+    if ( !current_user_can( 'manage_options' ) ) {
+        wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+    }
+    echo 'Here is where I output the HTML for my screen.<br>';
+    echo 'Это пример создания подпункта меню.';
+    echo '</div><pre>';
+}
 
 ?>
